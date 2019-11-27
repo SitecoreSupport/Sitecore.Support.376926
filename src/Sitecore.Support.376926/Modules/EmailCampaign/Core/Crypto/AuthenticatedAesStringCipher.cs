@@ -24,7 +24,7 @@ namespace Sitecore.Support.Modules.EmailCampaign.Core.Crypto
             }
             catch (FormatException)
             {
-                return null;
+                return base.TryDecrypt(encryptedMessage.Replace(" ", "+"));
             }
 
             return base.TryDecrypt(encryptedMessage);
